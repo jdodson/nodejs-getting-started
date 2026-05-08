@@ -14,6 +14,10 @@ app.get('/', (req, res) => {
   res.render('pages/index')
 })
 
+app.get('/health', (req, res) => {
+  res.send('OK')
+})
+
 const server = app.listen(port, () => {
   console.log(`Listening on ${port}`)
 })
